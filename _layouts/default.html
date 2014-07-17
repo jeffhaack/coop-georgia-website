@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<title>{{ page.title }}</title>
+	<link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/images/favicon.ico">
+	
+	<link href="{{ site.baseurl }}/assets/css/screen.css" rel="stylesheet" type="text/css">
+	<link href="{{ site.baseurl }}/assets/css/layout.css" rel="stylesheet" type="text/css">
+	<script src="{{ site.baseurl }}/assets/vendor/jquery-1.10.2.min.js"></script>
+	{% include google_analytics.html %}
+</head>
+
+<body>
+
+<!-- This is the header -->
+{% include header.html %}
+
+<!-- This is where the page content goes -->
+{{ content }}
+
+
+</body>
+</html>
