@@ -111,7 +111,7 @@ layout: default
       new L.Control.Zoom({ position: 'topright' }).addTo(map);    
       map.scrollWheelZoom.disable();
       var greenIcon = L.icon({
-          iconUrl: '/assets/images/map_icon.png',
+          iconUrl: "{{ site.baseurl }}/assets/images/map_icon.png",
           iconSize:     [25, 41], // size of the icon
       });
       L.marker([41.7208, 44.7463], {icon: greenIcon}).addTo(map)
