@@ -22,6 +22,9 @@ Todo
 - send to tako/natia for translation
 - write to nicolas/wilhelm
 
+http://jeffhaack.github.io/coop-georgia-website/en
+- need to add {{ site.baseurl }} to links
+
 
 
 
