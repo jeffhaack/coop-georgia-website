@@ -16,14 +16,7 @@ Todo
 ----
 
 - get more info on partners
-- check content page by page and make to list
-- figure out steps to get it up on github
-- copy english over into Georgian
-- send to tako/natia for translation
-- write to nicolas/wilhelm
-
-http://jeffhaack.github.io/coop-georgia-website/en
-- need to add {{ site.baseurl }} to links
+- make sure CNAME is set up right
 
 
 
