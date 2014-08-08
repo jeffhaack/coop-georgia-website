@@ -1,0 +1,125 @@
+---
+title: services/home
+section: services
+layout: default
+---
+
+			
+<div id="main-content">
+  <div class="row service-home-header">
+		<div class="col-sm-6">
+		  <h2><span>For <b>Home</b></span></h2>
+		</div>
+		<div class="col-sm-6">
+		  <p>
+		    It's easy to <span>recycle at home!</span>
+		    <b>We can help!</b>
+		  </p>
+		</div>
+  </div>
+
+  <div class="row service-home-how">
+		<div class="col-sm-12">
+		  <h3>How does it work?</h3>
+      <ol>
+        <li>
+          Sort your waste. Glass, Plastic, Paper/Cardboard, and Tin. 
+          <br />
+          (You'll be amazed how much your garbage bag shrinks)
+        </li>
+        <li>
+          Take your recyclables to our public recycling depot.
+        </li>
+      </ol>
+
+      <div id="service-home-map-container">
+        <div id="service-home-map"></div>
+        <div id="service-home-map-icon"></div>
+        <div id="service-home-map-icon-arrow"></div>
+      </div>
+		</div>
+  </div>
+
+  <div class="row service-home-faq">
+		<div class="col-sm-12">
+      <h3>FAQ(?)</h3>
+		</div>
+  </div>
+  <div class="row">
+		<div class="col-sm-6">
+      <div class="faq-item">
+        <p class="faq-question">
+          Where can I drop off my recycling?
+        </p>
+        <p class="faq-answer">
+          Right now we only have one public bin location, at the old entrance to the Hippodrome.  
+          We are working to offer more public drop off points in the future.  You may also consider <link>organizing community bins</link>.
+        </p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-question">
+          What are community bins?
+        </p>
+        <p class="faq-answer">
+          While we cannot yet offer recycling pickup at individual homes, some neighborhoods have joined together to recycle as a group.  
+          It is possible to for you to organize bins for your neighborhood or apartment building, and sign up for our recycling service.  
+          For more information visit <link>organizing community bins</link>.
+        </p>
+      </div>
+		</div>
+		<div class="col-sm-6">
+      <div class="faq-item">
+        <p class="faq-question">
+          What can I recycle?
+        </p>
+        <ul class="faq-answer">
+          <li>
+            Glass bottles/jars
+          </li>
+          <li>
+            Plastics (plastic bottles)
+          </li>
+          <li>
+            Paper and cardboard
+          </li>
+          <li>
+            Tin (cans, lids to jars)
+          </li>
+          <li>
+            Aluminum (soda and beer cans)
+          </li>
+        </ul>
+      </div>
+      <div class="faq-item">
+        <p class="faq-question">
+          What can I not recycle?
+        </p>
+        <p class="faq-answer">
+          We are not yet able to recycle Tetrapacks, which have paper on the outside and plastic on the inside (such as milk cartons). 
+           We also do not yet deal with compost, batteries, and certain types of plastic, such as plastic cups.			
+        </p>
+      </div>
+		</div>
+  </div>
+</div>			
+
+
+
+		
+    <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>		
+		<script>
+      var map = L.map('service-home-map',{ zoomControl: false }).setView([41.69337, 44.80149], 13);
+      L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png').addTo(map);
+      new L.Control.Zoom({ position: 'topright' }).addTo(map);    
+      map.scrollWheelZoom.disable();
+      var greenIcon = L.icon({
+          iconUrl: '/assets/images/map_logo.png',
+          iconSize:     [80, 80], // size of the icon
+          iconAnchor:   [40, 40], // point of the icon which will correspond to marker's location
+          popupAnchor:  [0, -25] // point from which the popup should open relative to the iconAnchor
+      });
+      L.marker([41.69337, 44.80149], {icon: greenIcon}).addTo(map)
+        .bindPopup('This is a marker!');
+    </script>		
+
+

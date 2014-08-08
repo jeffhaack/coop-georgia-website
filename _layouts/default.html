@@ -1,24 +1,87 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
-<head>
-	<meta charset="UTF-8">
-	<title>{{ page.title }}</title>
-	<link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/images/favicon.ico">
-	
-	<link href="{{ site.baseurl }}/assets/css/screen.css" rel="stylesheet" type="text/css">
-	<link href="{{ site.baseurl }}/assets/css/layout.css" rel="stylesheet" type="text/css">
-	<script src="{{ site.baseurl }}/assets/vendor/jquery-1.10.2.min.js"></script>
-	{% include google_analytics.html %}
-</head>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>About Us | coop.ge</title>
+		<link rel="stylesheet" href="/assets/fonts/stylesheet.css" type="text/css" />
+		<link rel="stylesheet" href="/assets/css/main.css" type="text/css" />
+<! 		<link rel="stylesheet" media="only screen and (-webkit-min-device-pixel-ratio: 2)" href="/assets/css/iphone.css" type="text/css" />
+		<link rel="stylesheet" media="screen and (max-width: 480px) and (min-width : 320px)" href="/assets/css/iphone.css"  type="text/css" />
+		<link rel="stylesheet" media="screen and (max-width: 1024px) and (min-width: 481px), only screen and (min-device-width : 768px) and (max-device-width: 1024px)" href="/assets/css/ipad.css"  type="text/css" />
+		<link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.css" type="text/css" />
+		<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
 
-<body>
+	  <meta property="og:title" content="About Us | coop.ge" />
+    <meta name="description" content="">
+		<meta property="og:description" content="" />
+	  <meta property="og:type" content="non_profit" />
+	  <meta property="og:url" content="" />
+    <meta property="og:image" content="http://coop.ge/images/fb.png" />
+	  <meta property="og:site_name" content="coop.ge" />
 
-<!-- This is the header -->
-{% include header.html %}
+    <link href="/assets/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	</head>
+	<body ontouchstart="">
+		<div class="frozen-bar">
+			<div class="logo"></div>
+			
+			<div id="menu-wrapper">
+				<a href="#"></a>
+				<nav id="menu">
+					<li> <a href="/en" class="icon-home">Home</a> </li>
+					{% if page.section == "about" %} <li class="active"> {% else %} <li> {% endif %}
+						<a href="/en/about" class="icon-about">About Us</a> </li>
+					<!--<li> <a href="/en/blog" class="icon-blog">News/Blog</a> </li>-->
+					{% if page.section == "services" %} <li id="services" class="active"> {% else %} <li id="services"> {% endif %}
+						<a href="#" class="icon-services">Recycling<br />Services</a> 
+            <div>
+					    <ul>
+					      <li> <div><a href="/en/services/business" class="icon-for-business">For Business</a></div> </li>
+					      <li> <div><a href="/en/services/home" class="icon-for-home">For Home</a></div> </li>
+					      <li> <div><a href="/en/services/school" class="icon-for-schools">For School</a></div> </li>
+					    </ul>
+            </div>
+					</li>
+					{% if page.section == "partners" %} <li class="active"> {% else %} <li> {% endif %}
+						<a href="/en/partners" class="icon-partners">Partners</a> </li>
+					{% if page.section == "get_involved" %} <li class="active"> {% else %} <li> {% endif %}
+						<a href="/en/get_involved" class="icon-involved">Get Involved</a> </li>
+					{% if page.section == "gear" %} <li class="active"> {% else %} <li> {% endif %}
+						<a href="/en/gear" class="icon-gear">Gear</a>
+				</nav>
+			</div>
+			<nav id="language">
+    			<li><a href="/ka/{{ page.title }}">ქართული</a></li>
+			</nav>
+				
+		</div>
 
-<!-- This is where the page content goes -->
-{{ content }}
+		
+		<div class="container-fluid">
+			
+			<div class="row" id="header">
+  			<div class="col-sm-12">
+  				<header id="slogan">
+  					<h1><b>Sort</b> Your Waste <br /><b>Protect</b> the Environment</h1>
+  				</header>
+  			</div>
+			</div>
 
 
-</body>
+		{{ content }}
+			
+		{% include footer.html %}
+
+		</div>
+
+
+		<script src="/assets/js/jquery-1.10.2.min.js"></script>
+		<script src="/assets/bootstrap/js/bootstrap.js"></script>
+		<script src="/assets/js/main.js"></script>
+	</body>
 </html>
+
+
+
