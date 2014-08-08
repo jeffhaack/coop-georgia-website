@@ -30,30 +30,34 @@
 			<div id="menu-wrapper">
 				<a href="#"></a>
 				<nav id="menu">
-					<li> <a href="{{ site.baseurl }}/en" class="icon-home">Home</a> </li>
+					<li> <a href="{{ site.baseurl }}/{{ page.lang }}" class="icon-home">Home</a> </li>
 					{% if page.section == "about" %} <li class="active"> {% else %} <li> {% endif %}
-						<a href="{{ site.baseurl }}/en/about" class="icon-about">About Us</a> </li>
+						<a href="{{ site.baseurl }}/{{ page.lang }}/about" class="icon-about">About Us</a> </li>
 					<!--<li> <a href="/en/blog" class="icon-blog">News/Blog</a> </li>-->
 					{% if page.section == "services" %} <li id="services" class="active"> {% else %} <li id="services"> {% endif %}
 						<a href="#" class="icon-services">Recycling<br />Services</a> 
             <div>
 					    <ul>
-					      <li> <div><a href="{{ site.baseurl }}/en/services/business" class="icon-for-business">For Business</a></div> </li>
-					      <li> <div><a href="{{ site.baseurl }}/en/services/home" class="icon-for-home">For Home</a></div> </li>
-					      <li> <div><a href="{{ site.baseurl }}/en/services/school" class="icon-for-schools">For School</a></div> </li>
+					      <li> <div><a href="{{ site.baseurl }}/{{ page.lang }}/services/business" class="icon-for-business">For Business</a></div> </li>
+					      <li> <div><a href="{{ site.baseurl }}/{{ page.lang }}/services/home" class="icon-for-home">For Home</a></div> </li>
+					      <li> <div><a href="{{ site.baseurl }}/{{ page.lang }}/services/school" class="icon-for-schools">For School</a></div> </li>
 					    </ul>
             </div>
 					</li>
 					{% if page.section == "partners" %} <li class="active"> {% else %} <li> {% endif %}
-						<a href="{{ site.baseurl }}/en/partners" class="icon-partners">Partners</a> </li>
+						<a href="{{ site.baseurl }}/{{ page.lang }}/partners" class="icon-partners">Partners</a> </li>
 					{% if page.section == "get_involved" %} <li class="active"> {% else %} <li> {% endif %}
-						<a href="{{ site.baseurl }}/en/get_involved" class="icon-involved">Get Involved</a> </li>
+						<a href="{{ site.baseurl }}/{{ page.lang }}/get_involved" class="icon-involved">Get Involved</a> </li>
 					{% if page.section == "gear" %} <li class="active"> {% else %} <li> {% endif %}
-						<a href="{{ site.baseurl }}/en/gear" class="icon-gear">Gear</a>
+						<a href="{{ site.baseurl }}/{{ page.lang }}/gear" class="icon-gear">Gear</a>
 				</nav>
 			</div>
 			<nav id="language">
-    			<li><a href="{{ site.baseurl }}/ka/{{ page.title }}">ქართული</a></li>
+				{% if page.lang == 'en' %}
+    				<li><a href="{{ site.baseurl }}/ka/{{ page.title }}">ქართული</a></li>
+    			{% else %}
+    				<li><a href="{{ site.baseurl }}/en/{{ page.title }}">English</a></li>
+    			{% endif %}
 			</nav>
 				
 		</div>
@@ -64,7 +68,11 @@
 			<div class="row" id="header">
   			<div class="col-sm-12">
   				<header id="slogan">
-  					<h1><b>Sort</b> Your Waste <br /><b>Protect</b> the Environment</h1>
+  					{% if page.lang == 'en' %}
+	    				<h1><b>Sort</b> Your Waste <br /><b>Protect</b> the Environment</h1>
+	    			{% else %}
+	    				<h1><b>გადაარჩიე</b> ნაგავი <br /><b>გადაარჩინე</b> ბუნება</h1>
+	    			{% endif %}
   				</header>
   			</div>
 			</div>
