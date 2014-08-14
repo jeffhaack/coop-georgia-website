@@ -30,28 +30,28 @@
 			<div id="menu-wrapper">
 				<a href="#"></a>
 				<nav id="menu">
-					<li> <a href="/en" class="icon-home">Home</a> </li>
+					<li> <a href="{{ site.baseurl }}/en" class="icon-home">Home</a> </li>
 					{% if page.section == "about" %} <li class="active"> {% else %} <li> {% endif %}
-						<a href="/en/about" class="icon-about">About Us</a> </li>
+						<a href="{{ site.baseurl }}/en/about" class="icon-about">About Us</a> </li>
 					{% if page.section == "recycling" %} <li class="active"> {% else %} <li> {% endif %}
-						<a href="/en/recycling" class="icon-what">What is Recycling?</a> </li>
+						<a href="{{ site.baseurl }}/en/recycling" class="icon-what">What is Recycling?</a> </li>
 					<!--<li> <a href="/en/blog" class="icon-blog">News/Blog</a> </li>-->
 					{% if page.section == "services" %} <li id="services" class="active"> {% else %} <li id="services"> {% endif %}
 						<a href="#" class="icon-services">Recycling<br />Services</a> 
             <div>
 					    <ul>
-					      <li> <div><a href="/en/services/business" class="icon-for-business">For Business</a></div> </li>
-					      <li> <div><a href="/en/services/home" class="icon-for-home">For Home</a></div> </li>
-					      <li> <div><a href="/en/services/school" class="icon-for-schools">For School</a></div> </li>
+					      <li> <div><a href="{{ site.baseurl }}/en/services/business" class="icon-for-business">For Business</a></div> </li>
+					      <li> <div><a href="{{ site.baseurl }}/en/services/home" class="icon-for-home">For Home</a></div> </li>
+					      <li> <div><a href="{{ site.baseurl }}/en/services/school" class="icon-for-schools">For School</a></div> </li>
 					    </ul>
             </div>
 					</li>
 					{% if page.section == "partners" %} <li class="active"> {% else %} <li> {% endif %}
-						<a href="/en/partners" class="icon-partners">Partners</a> </li>
+						<a href="{{ site.baseurl }}/en/partners" class="icon-partners">Partners</a> </li>
 					{% if page.section == "get_involved" %} <li class="active"> {% else %} <li> {% endif %}
-						<a href="/en/get_involved" class="icon-involved">Get Involved</a> </li>
+						<a href="{{ site.baseurl }}/en/get_involved" class="icon-involved">Get Involved</a> </li>
 					{% if page.section == "gear" %} <li class="active"> {% else %} <li> {% endif %}
-						<a href="/en/gear" class="icon-gear">Gear</a>
+						<a href="{{ site.baseurl }}/en/gear" class="icon-gear">Gear</a>
 				</nav>
 			</div>
 			<nav id="language">

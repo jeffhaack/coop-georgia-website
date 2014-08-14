@@ -30,28 +30,28 @@
 			<div id="menu-wrapper">
 				<a href="#"></a>
 				<nav id="menu">
-					<li> <a href="/ka" class="icon-home">მთავარი</a> </li>
+					<li> <a href="{{ site.baseurl }}/ka" class="icon-home">მთავარი</a> </li>
 					{% if page.section == "about" %} <li class="active"> {% else %} <li> {% endif %}
-						<a href="/ka/about" class="icon-about">ჩვენს შესახებ</a> </li>
+						<a href="{{ site.baseurl }}/ka/about" class="icon-about">ჩვენს შესახებ</a> </li>
 					{% if page.section == "recycling" %} <li class="active"> {% else %} <li> {% endif %}
-						<a href="/ka/recycling" class="icon-what">რა არის ნაგვის <br />გადამუშავება?</a> </li>
+						<a href="{{ site.baseurl }}/ka/recycling" class="icon-what">რა არის ნაგვის <br />გადამუშავება?</a> </li>
 					<!--<li> <a href="/en/blog" class="icon-blog">News/Blog</a> </li>-->
 					{% if page.section == "services" %} <li id="services" class="active"> {% else %} <li id="services"> {% endif %}
 						<a href="#" class="icon-services">მომსახურება</a> 
             <div>
 					    <ul>
-					      <li> <div><a href="/ka/services/business" class="icon-for-business">ბიზნესისთვის</a></div> </li>
-					      <li> <div><a href="/ka/services/home" class="icon-for-home">სახლისთვის</a></div> </li>
-					      <li> <div><a href="/ka/services/school" class="icon-for-schools">სკოლისთვის</a></div> </li>
+					      <li> <div><a href="{{ site.baseurl }}/ka/services/business" class="icon-for-business">ბიზნესისთვის</a></div> </li>
+					      <li> <div><a href="{{ site.baseurl }}/ka/services/home" class="icon-for-home">სახლისთვის</a></div> </li>
+					      <li> <div><a href="{{ site.baseurl }}/ka/services/school" class="icon-for-schools">სკოლისთვის</a></div> </li>
 					    </ul>
             </div>
 					</li>
 					{% if page.section == "partners" %} <li class="active"> {% else %} <li> {% endif %}
-						<a href="/ka/partners" class="icon-partners">პარტნიორები</a> </li>
+						<a href="{{ site.baseurl }}/ka/partners" class="icon-partners">პარტნიორები</a> </li>
 					{% if page.section == "get_involved" %} <li class="active"> {% else %} <li> {% endif %}
-						<a href="/ka/get_involved" class="icon-involved">ჩაერთეთ</a> </li>
+						<a href="{{ site.baseurl }}/ka/get_involved" class="icon-involved">ჩაერთეთ</a> </li>
 					{% if page.section == "gear" %} <li class="active"> {% else %} <li> {% endif %}
-						<a href="/ka/gear" class="icon-gear">აღჭურვილობა</a>
+						<a href="{{ site.baseurl }}/ka/gear" class="icon-gear">აღჭურვილობა</a>
 				</nav>
 			</div>
 			<nav id="language">
