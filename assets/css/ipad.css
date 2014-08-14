@@ -15,6 +15,9 @@
 #menu {
 	font-size: 12px;
 }
+#menu:lang(ka){
+  font-size: 9px;
+}
 
 #menu li a {
 	padding-top: 5px;
@@ -69,9 +72,34 @@
 }
 	
 	
+#main-content{
+  margin-top: 144px;
+}
+
+	
 .row {
   padding-left: 70px !important;
 }
+
+/* home page */
+@media (max-width: 690px) {
+  #home-how ol{
+    margin-bottom: 270px;
+  }
+  #home-how ol:after{
+	  content: "";
+	  display:block; 
+	  margin: 0px auto;
+	  background: url('../images/how_small.png') no-repeat;
+	  width: 298px;
+	  height: 235px;
+	  position: absolute;
+	  top: 280px;
+	  left: 20px;
+  }
+}
+
+
 /* services home */
 .service-home-how ol li:first-of-type{
   margin-bottom: 110px;
@@ -79,12 +107,12 @@
 .service-home-how ol li:first-of-type:after{
 	content: "";
 	display:inline-block; 
-	background: url('../images/services-icons.png') no-repeat 0 -410px;
+	background: url('../images/services-icons.png') no-repeat 0 -418px;
 	width: 208px;
-	height: 90px;
+	height: 85px;
   margin-left: 0;
   position: absolute;
-  top: 40px;
+  top: 48px;
   left: 11px;
 }
 
@@ -103,12 +131,12 @@
   .service-home-how ol li:first-of-type:after{
 	  content: "";
 	  display:inline-block; 
-	  background: url('../images/services-icons.png') no-repeat 0 -410px;
+	  background: url('../images/services-icons.png') no-repeat 0 -418px;
 	  width: 208px;
-	  height: 90px;
+	  height: 85px;
     margin-left: 0;
     position: absolute;
-    top: 91px;
+    top: 99px;
     left: 11px;
   }
 }

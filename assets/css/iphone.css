@@ -4,7 +4,13 @@ body .container-fluid {
 
 #main-content{
   padding: 0;
+  margin-top: 0;
 }
+#header-home + #main-content{
+  padding: 0;
+  margin-top: 0;
+}
+
 .row {
   margin-right: 0px !important;
   margin-left: 0px !important;
@@ -68,6 +74,9 @@ body .container-fluid {
 	top: 60px;
 	display: none;
 }
+#menu:lang(ka){
+  font-size: 10px;
+}
 
 
 #menu li a {
@@ -80,6 +89,9 @@ body .container-fluid {
   height: 73px;
   padding-left: 5px;
 }
+#menu li#services > div:lang(ka){
+  width: 270px;
+}
 #menu li#services > div.active{
   left: 90px;
 	opacity: 1;
@@ -87,6 +99,9 @@ body .container-fluid {
 #menu li#services > div > ul{
   height: 73px;
 	font-size: 12px;
+}
+#menu li#services > div > ul:lang(ka){
+	font-size: 10px;
 }
 #menu li#services > div > ul > li{
 	width: 80px;
@@ -114,10 +129,12 @@ body .container-fluid {
 #header-home {
   padding-left: 0px !important;
   padding-top: 60px !important;
+	position: relative;
 }
 
 #header-home #slogan {
 	background-color: rgba(255,255,255,0.85);
+	height: 295px;
 }
 
 #header-home #slogan h1 {
@@ -130,10 +147,12 @@ body .container-fluid {
 #header {
   padding-left: 0px !important;
   padding-top: 60px !important;
+	position: relative;
 }
 
 #header #slogan {
 	background-color: rgba(255,255,255,0.85);
+	height: 123px;
 }
 
 #header #slogan h1 {
@@ -148,6 +167,21 @@ body .container-fluid {
 	padding-left: 0;
 }
 
+/* home page */
+#home-how ol{
+  margin-bottom: 270px;
+}
+#home-how ol:after{
+  content: "";
+  display:block; 
+  margin: 0px auto;
+  background: url('../images/how_small.png') no-repeat;
+  width: 298px;
+  height: 235px;
+  position: absolute;
+  top: 280px;
+  left: 20px;
+}
 
 /* services home */
 .service-home-how ol li:first-of-type{
@@ -156,12 +190,12 @@ body .container-fluid {
 .service-home-how ol li:first-of-type:after{
   content: "";
   display:inline-block; 
-  background: url('../images/services-icons.png') no-repeat 0 -410px;
+  background: url('../images/services-icons.png') no-repeat 0 -418px;
   width: 208px;
-  height: 90px;
+  height: 85px;
   margin-left: 0;
   position: absolute;
-  top: 91px;
+  top: 99px;
   left: 11px;
 }
 .service-home-how ol > li:last-of-type:before {

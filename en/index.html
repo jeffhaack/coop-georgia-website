@@ -2,47 +2,141 @@
 title: 
 section: home
 lang: en
-layout: home
+layout: default
 ---
 	
-<div id="main-content">
-  <div class="row" id="home-service-links">
-	<div class="col-sm-6">
-	  <h2>Recycle with <b>Coop Georgia</b></h2>
-	  <p>
-	  Our recycling services are available for businesses, schools, and individuals.  Start recycling today!
-</p>
-<ul>
-  <li>
-    <a href="{{ site.baseurl }}/{{ page.lang }}/services/business">Sign up your Business</a>
-  </li>
-  <li>
-    <a href="{{ site.baseurl }}/{{ page.lang }}/services/home">Recycle at Home</a>
-  </li>
-  <li>
-    <a href="{{ site.baseurl }}/{{ page.lang }}/services/school">Recycling in Schools</a>
-  </li>
+<div id="main-content" class="home-page">
+  <div class="row" id="row1">
+	<div class="col-sm-6" id="home-service-links">
+	  <div>
+		  <h2>Recycle with <b>Coop Georgia</b></h2>
+		  <p>
+		  Our recycling services are available for businesses, schools, and individuals. <br/>Start recycling today!
+  </p>
+  <ul>
+    <li>
+      <a href="{{ site.baseurl }}/{{ page.lang }}/services/business">Sign up your Business</a>
+    </li>
+    <li>
+      <a href="{{ site.baseurl }}/{{ page.lang }}/services/home">Recycle at Home</a>
+    </li>
+    <li>
+      <a href="{{ site.baseurl }}/{{ page.lang }}/services/school">Recycling in Schools</a>
+    </li>
+  </ul>
+</div>
+	</div>
+	<div class="col-sm-6" id="home-bins">
+<img src="{{ site.baseurl }}/assets/images/recycle_bins.jpg" alt="coop.ge recycle bins"/>
+	</div>
+  </div>
+
+  <div class="row" id="row2">
+	<div class="col-sm-6" id="home-what-recycling">
+	  <div>
+		  <h3>What is Recycling?</h3>
+		  <p>
+		    Recycling is the process of using waste materials to create new products.  
+		    Instead of burying our waste in landfills which threaten the environment, 
+		    we can return it to the resource pool, thereby reducing the extraction and consumption of new raw materials from the earth.
+    Recycling reduces energy usage, air pollution and water pollution, which in turn offers us all healthier lives.  
+    By responsibly separating our waste, we have a positive impact by protecting the environment, conserving energy, and keeping Georgia beautiful.
+		  </p>
+		  <p>
+		    <a href="{{ site.baseurl }}/{{ page.lang }}/recycling">Continue reading...</a>
+		  </p>
+</div>
+	</div>
+	
+<!-- Removing the Blog stuff for now, replacing it with information on our partners below
+	<div class="col-sm-6" id="home-blog">
+	  <h3>News/Blog</h3>
+<ul id="blog-items">
+		  <li>
+		    <a href="#">This is a blog title</a>
+		    <span>06 August 2014</span>
+		  </li>
+		  <li>
+		    <a href="#">This is a another blog title that is very very very very very very very long</a>
+		    <span>01 August 2014</span>
+		  </li>
+		  <li>
+		    <a href="#">This is another blog title</a>
+		    <span>25 July 2014</span>
+		  </li>
 </ul>
-	</div>
-	<div class="col-sm-6">
+	</div>-->
+	<div class="col-sm-6" id="home-blog">
+		<h2>Our Partners</h2>
+		<p>Our clients - we like to think of them as partners - include restaurants, bars, offices, embassies, and neighborhoods. We provide a fast, clean pickup service to ensure that their recycling is processed efficiently, and they do their part in keeping Georgia clean and beautiful!
+		</p>
+
+		<p>
+			<a href="{{ site.baseurl }}/{{ page.lang }}/partners">Who are our partners?</a>
+		</p>
 	</div>
   </div>
 
   <div class="row">
-	<div class="col-sm-6">
-<div id="call-to-action">
-  
-</div>
-	</div>
-	<div class="col-sm-6">
+	<div class="col-sm-12" id="home-how">
+	  <h3>How does recycling work?</h3>
+<ol>
+  <li>
+    Our bins are placed at with restaurants, businesses, communities, and in public locations
+  </li>
+  <li>
+    We pick up the recycling reguarly
+  </li>
+  <li>
+    It goes to our sorting facility
+  </li>
+  <li>
+    The materials are sorted, compacted, and stored
+  </li>
+  <li>
+    Last, we take it to our partner factories - glass is used to make new bottles, paper is used to make toilet paper, and plastic is refabricated into new plastics
+  </li>
+</ol>
 	</div>
   </div>
+</div>
 
-  <div class="row">
-	<div class="col-sm-6">
-	</div>
-	<div class="col-sm-6">
-	</div>
-  </div>
-</div>
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script>
+function resize_home_blocks(){
+var heights_row1 = [];
+var heights_row2 = [];
+if ($('.home-page #row1 > div:first-of-type').css('float') != 'none'){
+  $('.home-page #row1 > div').each(function(){
+    $(this).height('auto');
+    heights_row1.push($(this).height());
+  });
+  $('.home-page #row1 > div').each(function() { $(this).height(Math.max.apply(Math, heights_row1)); });
+  var row1_text_height = $('.home-page #row1 > div:first-of-type > div').height();
+  var margin_top = (Math.max.apply(Math, heights_row1) - row1_text_height)/2;
+  $('.home-page #row1 > div:first-of-type > div').css('margin-top', margin_top.toString() + 'px');
+
+  $('.home-page #row2 > div').each(function(){
+    $(this).height('auto');
+    heights_row2.push($(this).height());
+  });
+  $('.home-page #row2 > div').each(function() { $(this).height(Math.max.apply(Math, heights_row2)); });
+}else{
+  $('.home-page #row1 > div').each(function(){
+    $(this).height('auto');
+  });
+  $('.home-page #row2 > div').each(function(){
+    $(this).height('auto');
+  });
+  $('.home-page #row1 > div:first-of-type > div').css('margin-top', '0px');
+}
+}
+
+$(document).ready(function(){
+resize_home_blocks();
+$(window).resize(function(){
+  resize_home_blocks();
+});
+});
+</script>
 

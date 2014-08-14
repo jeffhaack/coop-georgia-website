@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ka">
 	<head>
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,9 +7,9 @@
 		<title>About Us | coop.ge</title>
 		<link rel="stylesheet" href="{{ site.baseurl }}/assets/fonts/stylesheet.css" type="text/css" />
 		<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css" type="text/css" />
-<! 		<link rel="stylesheet" media="only screen and (-webkit-min-device-pixel-ratio: 2)" href="{{ site.baseurl }}/assets/css/iphone.css" type="text/css" />
-		<link rel="stylesheet" media="screen and (max-width: 480px) and (min-width : 320px)" href="{{ site.baseurl }}/assets/css/iphone.css"  type="text/css" />
-		<link rel="stylesheet" media="screen and (max-width: 1024px) and (min-width: 481px), only screen and (min-device-width : 768px) and (max-device-width: 1024px)" href="{{ site.baseurl }}/assets/css/ipad.css"  type="text/css" />
+<! 		<link rel="stylesheet" media="only screen and (-webkit-min-device-pixel-ratio: 2)" href="/assets/css/iphone.css" type="text/css" />
+		<link rel="stylesheet" media="screen and (max-width: 480px) and (min-width : 320px)" href="/assets/css/iphone.css"  type="text/css" />
+		<link rel="stylesheet" media="screen and (max-width: 1024px) and (min-width: 481px), only screen and (min-device-width : 768px) and (max-device-width: 1024px)" href="/assets/css/ipad.css"  type="text/css" />
 		<link rel="stylesheet" href="{{ site.baseurl }}/assets/bootstrap/css/bootstrap.css" type="text/css" />
 		<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
 
@@ -30,36 +30,32 @@
 			<div id="menu-wrapper">
 				<a href="#"></a>
 				<nav id="menu">
-					<li> <a href="{{ site.baseurl }}/en" class="icon-home">Home</a> </li>
+					<li> <a href="/ka" class="icon-home">მთავარი</a> </li>
 					{% if page.section == "about" %} <li class="active"> {% else %} <li> {% endif %}
-<<<<<<< HEAD
-						<a href="/en/about" class="icon-about">About Us</a> </li>
+						<a href="/ka/about" class="icon-about">ჩვენს შესახებ</a> </li>
 					{% if page.section == "recycling" %} <li class="active"> {% else %} <li> {% endif %}
-						<a href="/en/recycling" class="icon-what">What is Recycling?</a> </li>
-=======
-						<a href="{{ site.baseurl }}/en/about" class="icon-about">About Us</a> </li>
->>>>>>> sdfds
+						<a href="/ka/recycling" class="icon-what">რა არის ნაგვის <br />გადამუშავება?</a> </li>
 					<!--<li> <a href="/en/blog" class="icon-blog">News/Blog</a> </li>-->
 					{% if page.section == "services" %} <li id="services" class="active"> {% else %} <li id="services"> {% endif %}
-						<a href="#" class="icon-services">Recycling<br />Services</a> 
+						<a href="#" class="icon-services">მომსახურება</a> 
             <div>
 					    <ul>
-					      <li> <div><a href="{{ site.baseurl }}/en/services/business" class="icon-for-business">For Business</a></div> </li>
-					      <li> <div><a href="{{ site.baseurl }}/en/services/home" class="icon-for-home">For Home</a></div> </li>
-					      <li> <div><a href="{{ site.baseurl }}/en/services/school" class="icon-for-schools">For School</a></div> </li>
+					      <li> <div><a href="/ka/services/business" class="icon-for-business">ბიზნესისთვის</a></div> </li>
+					      <li> <div><a href="/ka/services/home" class="icon-for-home">სახლისთვის</a></div> </li>
+					      <li> <div><a href="/ka/services/school" class="icon-for-schools">სკოლისთვის</a></div> </li>
 					    </ul>
             </div>
 					</li>
 					{% if page.section == "partners" %} <li class="active"> {% else %} <li> {% endif %}
-						<a href="{{ site.baseurl }}/en/partners" class="icon-partners">Partners</a> </li>
+						<a href="/ka/partners" class="icon-partners">პარტნიორები</a> </li>
 					{% if page.section == "get_involved" %} <li class="active"> {% else %} <li> {% endif %}
-						<a href="{{ site.baseurl }}/en/get_involved" class="icon-involved">Get Involved</a> </li>
+						<a href="/ka/get_involved" class="icon-involved">ჩაერთეთ</a> </li>
 					{% if page.section == "gear" %} <li class="active"> {% else %} <li> {% endif %}
-						<a href="{{ site.baseurl }}/en/gear" class="icon-gear">Gear</a>
+						<a href="/ka/gear" class="icon-gear">აღჭურვილობა</a>
 				</nav>
 			</div>
 			<nav id="language">
-    			<li><a href="{{ site.baseurl }}/ka/{{ page.title }}">ქართული</a></li>
+    			<li><a href="/en/{{ page.title }}">English</a></li>
 			</nav>
 				
 		</div>
@@ -76,7 +72,7 @@
 
   			<div class="col-sm-12">
   				<header id="slogan">
-  					<h1><b>Sort</b> Your Waste <br /><b>Protect</b> the Environment</h1>
+  					<h1><b>გადაარჩიე</b> ნაგავი <br /><b>გადაარჩინე</b> ბუნება</h1>
   				</header>
   			</div>
 			</div>
