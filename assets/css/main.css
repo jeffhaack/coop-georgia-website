@@ -1,3 +1,13 @@
+body:lang(ka){
+	font-size: 13px;
+}
+h2:lang(ka){
+	font-size: 24px;
+}
+p:lang(ka){
+	font-size: 13px;
+}
+
 b{
 	font-family: 'source_sans_prosemibold';
 }
@@ -417,6 +427,9 @@ body .container-fluid {
   line-height: 30px;
   margin-bottom: 5px;
 }
+#home-service-links:lang(ka) ul li{
+	font-size: 12px;
+}
 #home-service-links ul li:last-of-type{
   margin-right: 0;
 }
@@ -472,6 +485,10 @@ body .container-fluid {
   font-family: 'source_sans_proextralight'; 
   font-weight: bold;
 }
+#home-what-recycling:lang(ka) h3{
+  font-weight: normal;
+  font-size: 20px;
+}
 #home-what-recycling a{
   color: #fff;
 }
@@ -514,6 +531,10 @@ body .container-fluid {
 #home-how ol{
   position: relative;
 }
+#home-how:lang(ka) li{
+	font-size: 13px;
+}
+
 #home-how ol:after{
 	content: "";
 	display:block; 
@@ -682,6 +703,9 @@ body .container-fluid {
   padding-bottom: 5px;
   margin-bottom: 20px;
 }
+#get-involved-row1:lang(ka) h2, #get-involved-row2:lang(ka) h2{
+	font-weight: normal;
+}
 #get-involved-row2 div#get-involved-image-box{
   max-width: 885px;
   position: relative;
@@ -779,6 +803,9 @@ body .container-fluid {
   padding-left: 10px;
   min-height: 40px;
   font-size: 18px;
+}
+.service-business-how:lang(ka) ol li{
+	font-size: 16px;
 }
 .service-business-how ol > li:before {
   content: counter(business-counter);
@@ -973,6 +1000,9 @@ body .container-fluid {
   min-height: 10px;
   font-size: 18px;
 }
+.service-home-how:lang(ka) ol li{
+	font-size: 16px;
+}
 .service-home-how ol > li:before {
   content: counter(home-counter);
   counter-increment: home-counter;
@@ -1088,6 +1118,9 @@ body .container-fluid {
 .faq-item .faq-question{
   font-family: 'source_sans_prosemibold';
   margin-bottom: 3px;
+}
+.faq-item .faq-question:lang(ka){
+	font-weight: bold;
 }
 .faq-item .faq-answer{
 	font-family: 'source_sans_prolight';

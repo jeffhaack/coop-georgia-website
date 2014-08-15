@@ -1,8 +1,19 @@
-<footer class="row" id="footer">
-	<section id="contact">
-		<h3>Contact</h3>
-		 <span><b>email:</b>&nbsprecycling@coop.ge</span>
-		 <span><b>Wilhelm&nbspRouenhoff</b>&nbsp&nbsp&nbsp592&nbsp98&nbsp44&nbsp99<br /><i>Director</i></span>
-		 <span id="last"><b>Maia&nbspGogiladze</b>&nbsp&nbsp&nbsp598&nbsp89&nbsp02&nbsp69<br /><i>Head&nbspof&nbspMarketing</i> </span>
-	</section>
-</footer>
+{% if page.lang == "en" %}
+	<footer class="row" id="footer">
+		<section id="contact">
+			<h3>Contact</h3>
+			 <span><b>email:</b>&nbsprecycling@coop.ge</span>
+			 <span><b>Wilhelm&nbspRouenhoff</b>&nbsp&nbsp&nbsp592&nbsp98&nbsp44&nbsp99<br /><i>Director</i></span>
+			 <span id="last"><b>Maia&nbspGogiladze</b>&nbsp&nbsp&nbsp598&nbsp89&nbsp02&nbsp69<br /><i>Head&nbspof&nbspMarketing</i> </span>
+		</section>
+	</footer>
+{% else %}
+	<footer class="row" id="footer">
+		<section id="contact">
+			<h3>კონტაქტი</h3>
+			 <span><b>ელ–ფოსტა:</b>&nbsprecycling@coop.ge</span>
+			 <span><b>Wilhelm&nbspRouenhoff</b>&nbsp&nbsp&nbsp592&nbsp98&nbsp44&nbsp99<br /><i>დირექტორი</i></span>
+			 <span id="last"><b>Maia&nbspGogiladze</b>&nbsp&nbsp&nbsp598&nbsp89&nbsp02&nbsp69<br /><i>Head&nbspof&nbspMarketing</i> </span>
+		</section>
+	</footer>
+{% endif %}
