@@ -1136,6 +1136,7 @@ body .container-fluid {
 /* partners */
 .partner-header{
   border-bottom: solid 1px #cb7320;
+  margin-bottom: 20px;
 }
 .partner-header h2{
   color: #cb7320;
