@@ -265,44 +265,6 @@ li {
 	opacity: 1;
 }
 
-#header-home {
-	background: url('../images/header_bg.jpg') no-repeat content-box center;
-	background-size: cover;
-	height: 360px;
-	padding-left: 95px;
-	position: fixed;
-	top: 0;
-	left: 0;
-  width: 100%;
-  z-index: 999;
-}
-
-#header-home #slogan {
-	background-color: rgba(255,255,255,0.8);
-	position: absolute;
-	width: 50%;
-	height: 360px;
-	right: 0;
-	text-align: center;
-}
-#header-home #slogan h1 {
-	position: relative;
-	display: inline-block;
-	text-align: left;
-	color: #778c38;
-	font-family: 'source_sans_proextralight';
-	line-height: 1.1;
-	font-size: 2.6em;
-	margin: 0 auto;
-/*	width: 370px;*/
-	height: 80px;
-	margin-top: 130px;
-	opacity: 1.0;
-	filter: alpha(opacity=100);
-	/*display: table-cell;
-	vertical-align: middle;*/
-}
-
 #header {
 	background: url('../images/header_bg.jpg') no-repeat content-box center;
 	background-size: cover;
@@ -313,6 +275,9 @@ li {
 	left: 0;
   width: 100%;
   z-index: 999;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 #header #slogan {
@@ -322,6 +287,9 @@ li {
 	height: 188px;
 	right: 0;
 	text-align: center;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
 }
 #header #slogan h1 {
 	position: relative;
@@ -339,6 +307,57 @@ li {
 	filter: alpha(opacity=100);
 	/*display: table-cell;
 	vertical-align: middle;*/
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+
+#header.home {
+	background: url('../images/header_bg.jpg') no-repeat content-box center;
+	background-size: cover;
+	height: 360px;
+	padding-left: 95px;
+	position: fixed;
+	top: 0;
+	left: 0;
+  width: 100%;
+  z-index: 999;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+#header.home #slogan {
+	background-color: rgba(255,255,255,0.8);
+	position: absolute;
+	width: 50%;
+	height: 360px;
+	right: 0;
+	text-align: center;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+}
+#header.home #slogan h1 {
+	position: relative;
+	display: inline-block;
+	text-align: left;
+	color: #778c38;
+	font-family: 'source_sans_proextralight';
+	line-height: 1.1;
+	font-size: 2.6em;
+	margin: 0 auto;
+/*	width: 370px;*/
+	height: 80px;
+	margin-top: 130px;
+	opacity: 1.0;
+	filter: alpha(opacity=100);
+	/*display: table-cell;
+	vertical-align: middle;*/
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 
@@ -402,10 +421,19 @@ body .container-fluid {
 #main-content{
   padding: 20px;
   font-family: 'source_sans_proregular';
-  margin-top: 188px;
 }
-#header-home + #main-content{
+
+#header + #main-content{
+  margin-top: 188px;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+}
+#header.home + #main-content{
   margin-top: 360px;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
 }
 #main-content a{
   color: #cb7320;
@@ -545,6 +573,10 @@ body .container-fluid {
 	position: absolute;
 	top: 50px;
 	left: 244px;
+}
+#home-how:lang(ka) ol:after{
+	left: 284px;
+	background-size: 552px 84px;
 }
 @media (max-width: 1100px) {
   #home-how ol{
@@ -1145,6 +1177,9 @@ body .container-fluid {
   margin-top: 0;
   padding-top: 8px;
 }
+.partner-header:lang(ka) h2{
+	font-weight: normal;
+}
 
 /* what is recycling */
 .what-header{
@@ -1157,6 +1192,9 @@ body .container-fluid {
   font-weight: bold;
   margin-top: 0;
   padding-top: 8px;
+}
+.what-header:lang(ka) h2{
+	font-weight: normal;
 }
 .what-content ul{
   padding-left: 25px;

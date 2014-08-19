@@ -39,7 +39,7 @@ layout: default_ka
 		    ნარჩენების გადამუშავება არის ძველი, ნარჩენი მასალისგან ახალი პროდუქტის მიღების პროცესი. ნარჩენები ნაგავსაყრელზე დაწვის ნაცვლად, რაც თავის მხრივ გარემოსთვის საფრთხეს წარმოადგენს, ხელახლა იქცევა რესურსად და ხვდება მოხმარების სივრცეში. ამ პროცესით ნედლი მასალის გამოყენების საჭიროება იკლებს და, შესაბამისად, ინახება ბუნებრივი რესურსები. გარდა ამისა, ნარჩენების გადამუშავება ზოგავს პროდუქტის შექმნისთვის საჭირო ენერგიას, იცავს წყალსა და ჰაერს დაბინძურებისგან. შედეგად კი ვღებულობთ ჯანსაღ გარემოს.
 		  </p>
 		  <p>
-		    <a href="{{ site.baseurl }}/{{ page.lang }}/recycling">Continue reading...</a>
+		    <a href="{{ site.baseurl }}/{{ page.lang }}/recycling">გაგრძელება...</a>
 		  </p>
 </div>
 	</div>
@@ -63,12 +63,12 @@ layout: default_ka
 </ul>
 	</div>-->
 	<div class="col-sm-6" id="home-blog">
-		<h2>Our Partners</h2>
-		<p>Our clients - we like to think of them as partners - include restaurants, bars, offices, embassies, and neighborhoods. We provide a fast, clean pickup service to ensure that their recycling is processed efficiently, and they do their part in keeping Georgia clean and beautiful!
+		<h2>ჩვენი პარტნიორები</h2>
+		<p>ჩვენს კლიენტებს განვიხილავთ, როგორც ჩვენს პარტნიორებს. ესენია – რესტორნები, ბარები, ოფისები, საელჩოები და სამეზობლოები. ჩვენ უზრუნველვყოფთ მათ სწრაფი და მოწესრიგებული მომსახურების სერვისით, რითიც ვაჩვენებთ, რომ ნარჩენების გადამუშავების პროცესში მათი მონაწილეობა  ეფექტურია და ამასთანავე, მათ საკუთარი წვლილი შეაქვთ საქართველოს ბუნებრივი სილამაზის დაცვასა და შენარჩუნებაში!
 		</p>
 
 		<p>
-			<a href="{{ site.baseurl }}/{{ page.lang }}/partners">Who are our partners?</a>
+			<a href="{{ site.baseurl }}/{{ page.lang }}/partners">ვინ არიან ჩვენი პარტნიორები?</a>
 		</p>
 	</div>
   </div>
@@ -78,26 +78,26 @@ layout: default_ka
 	  <h3>როგორ მუშაობს ჩვენი სერვისი?</h3>
 <ol>
   <li>
-    Our bins are placed at with restaurants, businesses, communities, and in public locations
+    ჩვენი ურნები განლაგებულია რესტორნებში, ბიზნეს-ცენტრებში, სამეზობლოებსა და საჯარო სივრცეში
   </li>
   <li>
-    ურნებიდან რეგულარულად იცლება გადასამუშავებელი მასალა
+    ურნებს ვცლით რეგულარულად
   </li>
   <li>
-    შეგროვებული მასალა იკრიბება ჩვენს საწყობში
+    ნარჩენი მასალა მიგვაქვს ჩვენს საწყობში
   </li>
   <li>
-    The materials are sorted, compacted, and stored
+    მასალები ხარისხდება, კომპაქტურად იფუთება და ინახება
   </li>
   <li>
-    Last, we take it to our partner factories - glass is used to make new bottles, paper is used to make toilet paper, and plastic is refabricated into new plastics
+    საბოლოოდ, მასალები მიგვაქვს ჩვენს პარტნიორ ქარხნებში, სადაც მინისგან ახალ ბოთლებს ამზადებენ. ქაღალდისგან მზადდება ტუალეტის ქაღალდი. ხოლო პლასტმასა გადამუშავდება პლასტმასის ახალ მასალად
   </li>
 </ol>
 	</div>
   </div>
 </div>
 
-<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script src="{{ site.baseurl }}/assets/js/jquery-1.10.2.min.js"></script>
 <script>
 function resize_home_blocks(){
 var heights_row1 = [];
@@ -133,6 +133,26 @@ resize_home_blocks();
 $(window).resize(function(){
   resize_home_blocks();
 });
+
+var shrinkHeader = true;
+if ($(window).width() < 480){
+  shrinkHeader = false;
+}
+function getCurrentScroll() {
+  return window.pageYOffset || document.documentElement.scrollTop;
+}
+$(window).scroll(function() {
+  if (shrinkHeader){
+    var scroll = getCurrentScroll();
+    if ( scroll == 0 ) {
+       $('#header').addClass('home');
+    }else {
+      $('#header').removeClass('home');
+      shrinkHeader = false;
+    }
+  }
+});
+
 });
 </script>
 

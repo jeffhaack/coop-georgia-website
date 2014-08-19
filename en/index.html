@@ -101,7 +101,7 @@ layout: default
   </div>
 </div>
 
-<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script src="{{ site.baseurl }}/assets/js/jquery-1.10.2.min.js"></script>
 <script>
 function resize_home_blocks(){
 var heights_row1 = [];
@@ -137,6 +137,26 @@ resize_home_blocks();
 $(window).resize(function(){
   resize_home_blocks();
 });
+
+var shrinkHeader = true;
+if ($(window).width() < 480){
+  shrinkHeader = false;
+}
+function getCurrentScroll() {
+  return window.pageYOffset || document.documentElement.scrollTop;
+}
+$(window).scroll(function() {
+  if (shrinkHeader){
+    var scroll = getCurrentScroll();
+    if ( scroll == 0 ) {
+       $('#header').addClass('home');
+    }else {
+      $('#header').removeClass('home');
+      shrinkHeader = false;
+    }
+  }
+});
+
 });
 </script>
 

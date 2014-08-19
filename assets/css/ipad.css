@@ -72,8 +72,11 @@
 }
 	
 	
-#main-content{
+#header + #main-content{
   margin-top: 144px;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 	
