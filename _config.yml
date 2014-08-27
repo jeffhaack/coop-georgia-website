@@ -1,5 +1,5 @@
 pygments: true
 markdown: rdiscount
 permalink: /:categories/:title/
-baseurl: 'http://jeffhaack.github.io/coop-georgia-website'
-#baseurl: ''
+#baseurl: 'http://jeffhaack.github.io/coop-georgia-website'
+baseurl: ''
