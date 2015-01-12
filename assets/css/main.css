@@ -417,6 +417,14 @@ body .container-fluid {
 	font-style: normal;
 }
 
+#footer #fb-link {
+    right:55px; 
+    position:absolute;
+}
+#footer #twitter-link {
+    right:10px; 
+    position:absolute;
+}
 
 #main-content{
   padding: 20px;
@@ -969,11 +977,36 @@ body .container-fluid {
 }
 .service-business-faq h3{
 	color: #cb7320;
-  font-family: 'source_sans_probold';
+    font-family: 'source_sans_probold';
 	border-bottom: solid 1px #cb7320;
 	padding-left: 15px;
 	padding-bottom: 5px;
 }
+
+/* gear page */
+.gear-row {
+    margin-bottom: 15px;
+    margin-top: 10px;
+    padding-right: 100px;
+}
+.gear-row h4{
+    color: #cb7320;
+    font-family: 'source_sans_probold';
+}
+.gear-row h5{
+    color: #778c38;
+    font-family: 'source_sans_probold';
+}
+.gear-pic {
+    width:225px;
+    height:225px;
+    margin: 0px 10px 0px 0px;
+}
+
+.gear-pic:lang(ka) {
+    margin: 8px 10px 8px 0px;   
+}
+
 /* for home*/
 .service-home-header{
   border-bottom: solid 1px #cb7320;

@@ -35,7 +35,8 @@
 						<a href="{{ site.baseurl }}/ka/about" class="icon-about">ჩვენს შესახებ</a> </li>
 					{% if page.section == "recycling" %} <li class="active"> {% else %} <li> {% endif %}
 						<a href="{{ site.baseurl }}/ka/recycling" class="icon-what">რა არის ნაგვის <br />გადამუშავება?</a> </li>
-					<!--<li> <a href="/en/blog" class="icon-blog">News/Blog</a> </li>-->
+					<!-- {% if page.section == "blog" %} <li class="active"> {% else %} <li> {% endif %}
+						<a href="{{ site.baseurl }}/ka/blog" class="icon-blog">ბლოგი</a> </li> -->
 					{% if page.section == "services" %} <li id="services" class="active"> {% else %} <li id="services"> {% endif %}
 						<a href="#" class="icon-services">მომსახურება</a> 
             <div>
@@ -50,9 +51,8 @@
 						<a href="{{ site.baseurl }}/ka/partners" class="icon-partners">პარტნიორები</a> </li>
 					{% if page.section == "get_involved" %} <li class="active"> {% else %} <li> {% endif %}
 						<a href="{{ site.baseurl }}/ka/get_involved" class="icon-involved">ჩაერთეთ</a> </li>
-					
-					<!--{% if page.section == "gear" %} <li class="active"> {% else %} <li> {% endif %}
-						<a href="{{ site.baseurl }}/ka/gear" class="icon-gear">აღჭურვილობა</a></li>-->
+					{% if page.section == "gear" %} <li class="active"> {% else %} <li> {% endif %}
+						<a href="{{ site.baseurl }}/ka/gear" class="icon-gear">აღჭურვილობა</a></li>
 				</nav>
 			</div>
 			<nav id="language">

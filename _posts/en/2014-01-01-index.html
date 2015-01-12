@@ -1,0 +1,74 @@
+---
+layout: default
+title: Coop Georgia Blog
+permalink: /en/blog/
+lang: en
+hidden: false
+section: blog
+---
+
+
+<div id="main-content">
+    <div class="row what-header">
+        <div class="col-sm-12">
+          <h2>Coop Georgia Blog</h2>
+        </div>
+    </div>
+
+    <div id="blog-container" class="row">
+        <div class="col-sm-9">
+
+
+
+
+{% for post in site.categories.blog %}
+  {% if {{post.lang}} == {{page.lang}} %}
+      <div class="row blog-item">
+        <div class="col-sm-2 blog-date">
+          <span>{{post.postday}}</span>
+          <span>{{post.postmonth}}</span>
+          <span>{{post.postyear}}</span>
+        </div>
+        <div class="col-sm-10">
+          <h2>{{post.title}}</h2>
+
+            <p>
+              {{ post.content | strip_html | truncatewords:75}}
+            </p>
+            <div class="continue-reading">
+              <a href="{{ site.baseurl }}{{ post.url }}">Continue Reading...</a>
+            </div>
+          </div>
+      </div>
+
+
+  {% endif %}
+{% endfor %}
+
+
+
+
+        </div>
+
+        {% unless {{page.hidden}} %}
+
+            <div class="col-sm-3">
+
+              <div id="blog-popular-posts">
+                <h3>Recent Posts</h3>
+                {% for post in site.categories.blog %}
+                  {% if {{post.lang}} == {{page.lang}} %}
+                    {% unless {{post.hidden}} %}
+                        <div class="popular-post-item">
+                          <h4><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h4>
+                          <p>{{post.postday}} {{post.postmonth}}, {{post.postyear}}</p>
+                        </div>
+                    {% endunless %}   
+                  {% endif %}
+                {% endfor %}
+              </div>
+            </div>
+        {% endunless %}
+        
+    </div>
+</div>
