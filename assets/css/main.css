@@ -514,7 +514,7 @@ body .container-fluid {
   width: 0;
 }
 #home-what-recycling > div{
- padding: 40px 45px 0px 23px;
+ padding: 40px 23px 0px 23px;
 }
 #home-what-recycling h3{
   margin-top: 0;
@@ -628,6 +628,12 @@ body .container-fluid {
   background-color: #ecbc00;
   z-index: 500;
 }
+
+/*#home-message {
+    border-top: solid 1px #ecbc00;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}*/
 
 /* about page */
 .about-team-header h2{
