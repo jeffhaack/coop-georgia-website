@@ -477,16 +477,18 @@ body .container-fluid {
   padding: 5px 10px;
 }
 #home-bins{
-  background-color: #f5dd7d;
+  /*background-color: #f5dd7d;*/
+  background-color: white;
   text-align: left;
   padding: 0;
   position: relative;
   margin-bottom: 10px;
-  border-left: solid 5px #ecbc00;
+  /*border-left: solid 5px #ecbc00;*/
 }
 #home-bins img{
   max-width: 650px;
   width: 100%;
+  border-left: solid 5px #ecbc00;
 }
 #home-bins:after{
 	width: 0; 
@@ -495,7 +497,7 @@ body .container-fluid {
 	border-bottom: 27px solid transparent;
 	border-left: 27px solid #fff;
 	position: absolute;
-	top: 105px;
+	top: 85px;
 	left: -5px;
 	content: "";
 }
