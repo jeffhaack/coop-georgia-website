@@ -170,59 +170,62 @@ layout: default
 <script src="{{ site.baseurl }}/assets/js/jquery-1.10.2.min.js"></script>
 <script>
 function resize_home_blocks(){
-var heights_row1 = [];
-var heights_row2 = [];
-if ($('.home-page #row1 > div:first-of-type').css('float') != 'none'){
-  $('.home-page #row1 > div').each(function(){
-    $(this).height('auto');
-    heights_row1.push($(this).height());
-  });
-  $('.home-page #row1 > div').each(function() { $(this).height(Math.max.apply(Math, heights_row1)); });
-  var row1_text_height = $('.home-page #row1 > div:first-of-type > div').height();
-  var margin_top = (Math.max.apply(Math, heights_row1) - row1_text_height)/2;
-  $('.home-page #row1 > div:first-of-type > div').css('margin-top', margin_top.toString() + 'px');
+  var heights_row1 = [];
+  var heights_row2 = [];
+  if ($('.home-page #row1 > div:first-of-type').css('float') != 'none'){
+    $('.home-page #row1 > div').each(function(){
+      $(this).height('auto');
+      heights_row1.push($(this).height());
+    });
+    $('.home-page #row1 > div').each(function() { $(this).height(Math.max.apply(Math, heights_row1)); });
+    var row1_text_height = $('.home-page #row1 > div:first-of-type > div').height();
+    var margin_top = (Math.max.apply(Math, heights_row1) - row1_text_height)/2;
+    $('.home-page #row1 > div:first-of-type > div').css('margin-top', margin_top.toString() + 'px');
 
-  $('.home-page #row2 > div').each(function(){
-    $(this).height('auto');
-    heights_row2.push($(this).height());
-  });
-  $('.home-page #row2 > div').each(function() { $(this).height(Math.max.apply(Math, heights_row2)); });
-}else{
-  $('.home-page #row1 > div').each(function(){
-    $(this).height('auto');
-  });
-  $('.home-page #row2 > div').each(function(){
-    $(this).height('auto');
-  });
-  $('.home-page #row1 > div:first-of-type > div').css('margin-top', '0px');
-}
+    $('.home-page #row2 > div').each(function(){
+      $(this).height('auto');
+      heights_row2.push($(this).height());
+    });
+    $('.home-page #row2 > div').each(function() { $(this).height(Math.max.apply(Math, heights_row2)); });
+  }else{
+    $('.home-page #row1 > div').each(function(){
+      $(this).height('auto');
+    });
+    $('.home-page #row2 > div').each(function(){
+      $(this).height('auto');
+    });
+    $('.home-page #row1 > div:first-of-type > div').css('margin-top', '0px');
+  }
 }
 
 $(document).ready(function(){
-resize_home_blocks();
-$(window).resize(function(){
   resize_home_blocks();
-});
+  
+  $(window).resize(function(){
+    resize_home_blocks();
+  });
 
-var shrinkHeader = true;
-if ($(window).width() < 480){
-  shrinkHeader = false;
-}
-function getCurrentScroll() {
-  return window.pageYOffset || document.documentElement.scrollTop;
-}
-$(window).scroll(function() {
-  if (shrinkHeader){
-    var scroll = getCurrentScroll();
-    if ( scroll == 0 ) {
-       $('#header').addClass('home');
-    }else {
-      $('#header').removeClass('home');
-      shrinkHeader = false;
-    }
+  var shrinkHeader = true;
+  if ($(window).width() < 480){
+    shrinkHeader = false;
   }
+
+  function getCurrentScroll() {
+    return window.pageYOffset || document.documentElement.scrollTop;
+  }
+
+  $(window).scroll(function() {
+    if (shrinkHeader){
+      var scroll = getCurrentScroll();
+      if ( scroll == 0 ) {
+         $('#header').addClass('home');
+      }else {
+        $('#header').removeClass('home');
+        shrinkHeader = false;
+      }
+    }
+  });
 });
 
-});
 </script>
 
